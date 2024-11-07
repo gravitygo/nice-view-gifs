@@ -4,9 +4,6 @@ import os
 def gif_to_lvgl(gif_path, output_c_file):
     img_name = "img" 
 
-    # Ensure the output directory exists
-    os.makedirs("", exist_ok=True)
-
     # Open the GIF file
     gif = Image.open(gif_path)
     frame_count = gif.n_frames
@@ -88,7 +85,7 @@ def create_edits(file, duration):
     lines[175] = f"lv_animimg_set_src(art, (const void **) anim_imgs, {frames});\n"
     lines[178] = f"lv_animimg_set_duration(art, {duration*frames});\n"
    
-    with open("./output.c", 'w') as file:
+    with open(os.path.join(__location__, '../../boards/shields/nice_view_custom/widgets/status.c'), 'w') as file:
         file.writelines(lines)
 
     print(f"Applied edits successfully.")

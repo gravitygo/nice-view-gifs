@@ -43,7 +43,7 @@ def prompt_for_threshold():
 def main():
     gif_file = prompt_for_gif_file()
     output_directory = prompt_for_output_directory()
-    output_file = os.path.join(output_directory, gif_file)
+    output_file = os.path.join(output_directory, os.path.basename(gif_file))
     speed = 100
 
     while True:
