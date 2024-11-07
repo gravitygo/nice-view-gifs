@@ -1,12 +1,7 @@
-# nice-view-mod
+# nice-view-gif
 A copy of the nice!view shield from the official ZMK firmware as a ZMK module for the purposes of easily customizing.
-As provided, it should function exactly like the current nice!view shield present in the ZMK firmware.
 
-This module is meant to be added to an existing forked customized keymap repo like [this one for the Urchin board](https://github.com/duckyb/zmk-urchin) or [this one for the Chocofi](https://github.com/beekeeb/zmk-config-corne-chocofi-with-niceview) with build actions set up to build your firmware with github actions and is of course meant for boards with the nice!view. Please check for such forkable repos for your board if you do not currently have one.
-
-This repo is meant only to serve as a starting point for customization such as adding your own art or animations. Simply fork this repo and make the edits you would like and you can easily share your customizations and animations with others as they can easily include your module in thier firmware builds with only a few changes to thier west file and build.yaml.
-
-For a complete example of forking and editing this repo to make a custom nice_view shield with custom animations, check out [https://github.com/GPeye/urchin-peripheral-animation](https://github.com/GPeye/urchin-peripheral-animation)
+This module is meant to be used as a tool to send your own gifs to you nice!view. Simply fork this repo and run the python script in the converter directory, and this will edit the files to add a gif to the module.
 
 Replace the url-base and shield name below with whatever you customize in your fork.
 
@@ -20,16 +15,16 @@ manifest:
       # zmk official
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: gpeye                         #new entry
-      url-base: https://github.com/GPeye  #new entry
+    - name: danielsodium                        # your username
+      url-base: https://github.com/danielsodium # your github
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: nice-view-mod                 #new entry
-      remote: gpeye                       #new entry
-      revision: main                      #new entry
+    - name: nice-view-gif                 # your repository name
+      remote: danielsodium                # your username
+      revision: bongo-cat                 # whatever branch you want
   self:
     path: config
 ```
@@ -40,7 +35,7 @@ Now simply swap out the default nice_view shield on the board for the custom one
 ---
 include:
   - board: nice_nano_v2
-    shield: urchin_left nice_view_adapter  nice_view_custom #custom shield
+    shield: corne_left nice_view_adapter  nice_view_custom #custom shield
   - board: nice_nano_v2
-    shield: urchin_right nice_view_adapter nice_view_custom #custom shield
+    shield: corne_right 
 ```
