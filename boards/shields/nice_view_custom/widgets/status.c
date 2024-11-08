@@ -26,6 +26,145 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/keymap.h>
 #include <zmk/wpm.h>
 
+LV_IMG_DECLARE(img_0);
+LV_IMG_DECLARE(img_1);
+LV_IMG_DECLARE(img_2);
+LV_IMG_DECLARE(img_3);
+LV_IMG_DECLARE(img_4);
+LV_IMG_DECLARE(img_5);
+LV_IMG_DECLARE(img_6);
+LV_IMG_DECLARE(img_7);
+LV_IMG_DECLARE(img_8);
+LV_IMG_DECLARE(img_9);
+LV_IMG_DECLARE(img_10);
+LV_IMG_DECLARE(img_11);
+LV_IMG_DECLARE(img_12);
+LV_IMG_DECLARE(img_13);
+LV_IMG_DECLARE(img_14);
+LV_IMG_DECLARE(img_15);
+LV_IMG_DECLARE(img_16);
+LV_IMG_DECLARE(img_17);
+LV_IMG_DECLARE(img_18);
+LV_IMG_DECLARE(img_19);
+LV_IMG_DECLARE(img_20);
+LV_IMG_DECLARE(img_21);
+LV_IMG_DECLARE(img_22);
+LV_IMG_DECLARE(img_23);
+LV_IMG_DECLARE(img_24);
+LV_IMG_DECLARE(img_25);
+LV_IMG_DECLARE(img_26);
+LV_IMG_DECLARE(img_27);
+LV_IMG_DECLARE(img_28);
+LV_IMG_DECLARE(img_29);
+LV_IMG_DECLARE(img_30);
+LV_IMG_DECLARE(img_31);
+LV_IMG_DECLARE(img_32);
+LV_IMG_DECLARE(img_33);
+LV_IMG_DECLARE(img_34);
+LV_IMG_DECLARE(img_35);
+LV_IMG_DECLARE(img_36);
+LV_IMG_DECLARE(img_37);
+LV_IMG_DECLARE(img_38);
+LV_IMG_DECLARE(img_39);
+LV_IMG_DECLARE(img_40);
+LV_IMG_DECLARE(img_41);
+LV_IMG_DECLARE(img_42);
+LV_IMG_DECLARE(img_43);
+LV_IMG_DECLARE(img_44);
+LV_IMG_DECLARE(img_45);
+LV_IMG_DECLARE(img_46);
+LV_IMG_DECLARE(img_47);
+LV_IMG_DECLARE(img_48);
+LV_IMG_DECLARE(img_49);
+LV_IMG_DECLARE(img_50);
+LV_IMG_DECLARE(img_51);
+LV_IMG_DECLARE(img_52);
+LV_IMG_DECLARE(img_53);
+LV_IMG_DECLARE(img_54);
+LV_IMG_DECLARE(img_55);
+LV_IMG_DECLARE(img_56);
+LV_IMG_DECLARE(img_57);
+LV_IMG_DECLARE(img_58);
+LV_IMG_DECLARE(img_59);
+LV_IMG_DECLARE(img_60);
+LV_IMG_DECLARE(img_61);
+LV_IMG_DECLARE(img_62);
+LV_IMG_DECLARE(img_63);
+LV_IMG_DECLARE(img_64);
+LV_IMG_DECLARE(img_65);
+LV_IMG_DECLARE(img_66);
+LV_IMG_DECLARE(img_67);
+
+const lv_img_dsc_t *anim_imgs[] = {
+    &img_0,
+    &img_1,
+    &img_2,
+    &img_3,
+    &img_4,
+    &img_5,
+    &img_6,
+    &img_7,
+    &img_8,
+    &img_9,
+    &img_10,
+    &img_11,
+    &img_12,
+    &img_13,
+    &img_14,
+    &img_15,
+    &img_16,
+    &img_17,
+    &img_18,
+    &img_19,
+    &img_20,
+    &img_21,
+    &img_22,
+    &img_23,
+    &img_24,
+    &img_25,
+    &img_26,
+    &img_27,
+    &img_28,
+    &img_29,
+    &img_30,
+    &img_31,
+    &img_32,
+    &img_33,
+    &img_34,
+    &img_35,
+    &img_36,
+    &img_37,
+    &img_38,
+    &img_39,
+    &img_40,
+    &img_41,
+    &img_42,
+    &img_43,
+    &img_44,
+    &img_45,
+    &img_46,
+    &img_47,
+    &img_48,
+    &img_49,
+    &img_50,
+    &img_51,
+    &img_52,
+    &img_53,
+    &img_54,
+    &img_55,
+    &img_56,
+    &img_57,
+    &img_58,
+    &img_59,
+    &img_60,
+    &img_61,
+    &img_62,
+    &img_63,
+    &img_64,
+    &img_65,
+    &img_66,
+    &img_67,
+};
 
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
@@ -173,10 +312,10 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     lv_obj_center(art);
 
     // PATCH SHOULD FILL IN FRAME NUMBER
-    lv_animimg_set_src(art, (const void **) anim_imgs, );
+lv_animimg_set_src(art, (const void **) anim_imgs, 68);
 
     // PATCH SHOULD FILL IN DURATION
-    lv_animimg_set_duration(art, );
+lv_animimg_set_duration(art, 6800);
     lv_animimg_set_repeat_count(art, LV_ANIM_REPEAT_INFINITE);
     lv_animimg_start(art);
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);
@@ -189,3 +328,4 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
 }
 
 lv_obj_t *zmk_widget_status_obj(struct zmk_widget_status *widget) { return widget->obj; }
+
