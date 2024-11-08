@@ -1,8 +1,8 @@
 from PIL import Image, ImageOps
 import os
 
-def gif_to_lvgl(gif_path, output_c_file):
-    img_name = "img" 
+def gif_to_lvgl(gif_path, dir, output_c_file):
+    img_name = "img"
 
     # Open the GIF file
     gif = Image.open(gif_path)
@@ -20,7 +20,6 @@ def gif_to_lvgl(gif_path, output_c_file):
         for frame_index in range(frame_count):
             gif.seek(frame_index)
             frame = ImageOps.invert(gif.convert("1"))
-            frame = frame.transpose(Image.Transpose.ROTATE_270)
 
             frame_data = frame.tobytes()
             data_size = len(frame_data) + 8
@@ -66,7 +65,7 @@ def gif_to_lvgl(gif_path, output_c_file):
 
 def create_edits(file, duration):
     __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
-    frames = gif_to_lvgl(file, os.path.join(__location__, '../../boards/shields/nice_view_custom/widgets/art.c'))
+    frames = gif_to_lvgl(file, __location__, os.path.join(__location__, '../../boards/shields/nice_view_custom/widgets/art.c'))
 
     with open(os.path.join(__location__, 'template.c'), 'r') as file:
         lines = file.readlines()
