@@ -2,6 +2,7 @@ import os
 import sys
 from process import process_gif
 from lvgf import create_edits
+from rotate import rotate_gif
 
 VIEW_WIDTH = 68
 VIEW_HEIGHT = 140
@@ -57,8 +58,10 @@ def main():
         redo = input("Would you like to redo processing with a different threshold? (y/n): ").strip().lower()
         if redo != 'y':
             break
-    
-    create_edits(output_file, speed)
+
+    rotated = os.path.join(output_directory, "rotated_" + os.path.basename(gif_file))
+    rotate_gif(output_file, rotated)
+    create_edits(rotated, speed)
 
 
 if __name__ == "__main__":
