@@ -1,6 +1,7 @@
 # nice-view-gif
 A copy of the nice!view shield from the official ZMK firmware as a ZMK module for the purposes of easily customizing.
 
+If you're looking for the bongo cat code it is in the `bongo-cat` branch.
 This module is meant to be used as a tool to send your own gifs to you nice!view. Simply fork this repo and run the python script in the converter directory, and this will edit the files to add a gif to the module.
 
 Replace the url-base and shield name below with whatever you customize in your fork.
