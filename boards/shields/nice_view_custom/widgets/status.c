@@ -60,6 +60,25 @@ LV_IMG_DECLARE(img_30);
 LV_IMG_DECLARE(img_31);
 LV_IMG_DECLARE(img_32);
 LV_IMG_DECLARE(img_33);
+LV_IMG_DECLARE(img_34);
+LV_IMG_DECLARE(img_35);
+LV_IMG_DECLARE(img_36);
+LV_IMG_DECLARE(img_37);
+LV_IMG_DECLARE(img_38);
+LV_IMG_DECLARE(img_39);
+LV_IMG_DECLARE(img_40);
+LV_IMG_DECLARE(img_41);
+LV_IMG_DECLARE(img_42);
+LV_IMG_DECLARE(img_43);
+LV_IMG_DECLARE(img_44);
+LV_IMG_DECLARE(img_45);
+LV_IMG_DECLARE(img_46);
+LV_IMG_DECLARE(img_47);
+LV_IMG_DECLARE(img_48);
+LV_IMG_DECLARE(img_49);
+LV_IMG_DECLARE(img_50);
+LV_IMG_DECLARE(img_51);
+LV_IMG_DECLARE(img_52);
 
 const lv_img_dsc_t *anim_imgs[] = {
     &img_0,
@@ -96,6 +115,25 @@ const lv_img_dsc_t *anim_imgs[] = {
     &img_31,
     &img_32,
     &img_33,
+    &img_34,
+    &img_35,
+    &img_36,
+    &img_37,
+    &img_38,
+    &img_39,
+    &img_40,
+    &img_41,
+    &img_42,
+    &img_43,
+    &img_44,
+    &img_45,
+    &img_46,
+    &img_47,
+    &img_48,
+    &img_49,
+    &img_50,
+    &img_51,
+    &img_52,
 };
 
 
@@ -244,10 +282,10 @@ int zmk_widget_status_init(struct zmk_widget_status *widget, lv_obj_t *parent) {
     lv_obj_center(art);
 
     // PATCH SHOULD FILL IN FRAME NUMBER
-lv_animimg_set_src(art, (const void **) anim_imgs, 34);
+lv_animimg_set_src(art, (const void **) anim_imgs, 53);
 
     // PATCH SHOULD FILL IN DURATION
-lv_animimg_set_duration(art, 1700);
+lv_animimg_set_duration(art, 1590);
     lv_animimg_set_repeat_count(art, LV_ANIM_REPEAT_INFINITE);
     lv_animimg_start(art);
     lv_obj_align(art, LV_ALIGN_TOP_LEFT, 0, 0);

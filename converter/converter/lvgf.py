@@ -20,7 +20,7 @@ def gif_to_lvgl(gif_path, output_c_file):
         for frame_index in range(frame_count):
             gif.seek(frame_index)
             frame = ImageOps.invert(gif.convert("1"))
-            frame = frame.rotate(-90, expand=True)
+            frame = frame.transpose(Image.Transpose.ROTATE_270)
 
             frame_data = frame.tobytes()
             data_size = len(frame_data) + 8
